@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FF99C8;
+    color: #FCF6BD;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+header {
+    background-color: #EED5C2;
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+}
+
+.nombre {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-size: 40pt;
+    font-style: normal;
+    color: #FF1053;
+    text-align: center;
+}
+
+.header1 {
+    background-color: #FF1053;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+span {
+    color: #FCF6BD;
+}
+
+.productos {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    overflow: hidden;
+    grid-template-rows: 2000px 0px;
+}
+
+.precios {
+    color: #FF1053;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card img {
+    width: 23%;
+    height: 430px;
+    object-fit: cover;
+}
+
+.card-product {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    color: #2A324B;
+    padding: 10px;
+}
+
+.card-product button {
+    padding: 10px;
+    color: #FF1053;
+    border: 1px solid #FF1053;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 23%;
+}
+
+.card-product button:hover {
+    background-color: #ffc5d4;
+    box-shadow: 2px 4px 4px #2A324B;
+}
+
+/*# sourceMappingURL=estilos.css.map */
