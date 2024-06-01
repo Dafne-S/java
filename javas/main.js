@@ -2,57 +2,57 @@
     "sass"; "sass --watch src/sass:src/css"
 }
 
-console.log("Mensaje de prueba");
-let nombre = "John"
-console.log(nombre)
-alert("BIENVENIDO/A");
+// console.log("Mensaje de prueba");
+// let nombre = "John"
+// console.log(nombre)
+// alert("BIENVENIDO/A");
 
-let saludo = "Hola";
-let nombreIngresado = prompt("Ingrese su nombre");
-let apellidoIngresado = prompt("Ingrese su apellido");
+// let saludo = "Hola";
+// let nombreIngresado = prompt("Ingrese su nombre");
+// let apellidoIngresado = prompt("Ingrese su apellido");
 
-if((nombreIngresado !="") && (apellidoIngresado !="")){
-    alert("Nombre: "+nombreIngresado +"\nApellido: "+apellidoIngresado);
-}else{
-    alert("Error: Ingresar nombre y apellido");
-}
+// if((nombreIngresado !="") && (apellidoIngresado !="")){
+//     alert("Nombre: "+nombreIngresado +"\nApellido: "+apellidoIngresado);
+// }else{
+//     alert("Error: Ingresar nombre y apellido");
+// }
 
-let edad = prompt("Ingresa tu edad");
+// let edad = prompt("Ingresa tu edad");
 
-if (edad >= 18){
-    console.log("Podes entrar.");
-}
-if (edad <= 18){
-    console.log("No podes entrar.");
-}
-class Producto{
-    contructor(nombre,precio){
-    this.nombre = nombre.toUpperCase();
-    this.precio = parseFloat(precio);
-}
+// if (edad >= 18){
+//     console.log("Podes entrar.");
+// }
+// if (edad <= 18){
+//     console.log("No podes entrar.");
+// }
+// class Producto{
+//     contructor(nombre,precio){
+//     this.nombre = nombre.toUpperCase();
+//     this.precio = parseFloat(precio);
+// }
 
-calcularIva(){
-    this.precio = this.precio *1.21;
-}
-}
-const ProductoRem1 = new Producto ("remera celeste", "4200");
-const ProductoRem2 = new Producto ("remera blanca", "5000");
-const ProductoRem3 = new Producto ("remera verde", "4000");
-const Producto1 = new Producto ("sweater", "10000");
+// calcularIva(){
+//     this.precio = this.precio *1.21;
+// }
+// }
+// const ProductoRem1 = new Producto ("remera celeste", "4200");
+// const ProductoRem2 = new Producto ("remera blanca", "5000");
+// const ProductoRem3 = new Producto ("remera verde", "4000");
+// const Producto1 = new Producto ("sweater", "10000");
 
-ProductoRem1.calcularIva ();
-ProductoRem2.calcularIva ();
-ProductoRem3.calcularIva ();
-Producto1.calcularIva ();
+// ProductoRem1.calcularIva ();
+// ProductoRem2.calcularIva ();
+// ProductoRem3.calcularIva ();
+// Producto1.calcularIva ();
 
-const remeras = ["ProductoRem1", "ProductoRem2", "ProductoRem3"]
-const sweater = ["Producto1"]
-const mujer = remeras.concat(sweater)
-console.log(mujer)
+// const remeras = ["ProductoRem1", "ProductoRem2", "ProductoRem3"]
+// const sweater = ["Producto1"]
+// const mujer = remeras.concat(sweater)
+// console.log(mujer)
 
-console.log(hoy.getFullYear())
-console.log(hoy.getMonth())
-console.log(hoy.getDay())
+// console.log(hoy.getFullYear())
+// console.log(hoy.getMonth())
+// console.log(hoy.getDay())
 
 let productos = [
 {
