@@ -53,8 +53,10 @@
 // console.log(hoy.getFullYear())
 // console.log(hoy.getMonth())
 // console.log(hoy.getDay())
+const productos = [{id: 1, producto: "la isla del tesoro", precio: 20000},
+                {id: 2, producto: "romeo y julieta", precio: 25000}];
 
-let productos = [
+let libros = [
 {
     id: 'K1156235asdas-126',
     name: 'La isla del  tesoro',
