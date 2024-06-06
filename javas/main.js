@@ -2,67 +2,54 @@
     "sass"; "sass --watch src/sass:src/css"
 }
 
-// console.log("Mensaje de prueba");
-// let nombre = "John"
-// console.log(nombre)
-// alert("BIENVENIDO/A");
+let mensaje = localStrorage.getItem('mensajeLocal')
+console.log(mensaje)
 
-// let saludo = "Hola";
-// let nombreIngresado = prompt("Ingrese su nombre");
-// let apellidoIngresado = prompt("Ingrese su apellido");
 
-// if((nombreIngresado !="") && (apellidoIngresado !="")){
-//     alert("Nombre: "+nombreIngresado +"\nApellido: "+apellidoIngresado);
-// }else{
-//     alert("Error: Ingresar nombre y apellido");
-// }
-
-// let edad = prompt("Ingresa tu edad");
-
-// if (edad >= 18){
-//     console.log("Podes entrar.");
-// }
-// if (edad <= 18){
-//     console.log("No podes entrar.");
-// }
-// class Producto{
-//     contructor(nombre,precio){
-//     this.nombre = nombre.toUpperCase();
-//     this.precio = parseFloat(precio);
-// }
-
-// calcularIva(){
-//     this.precio = this.precio *1.21;
-// }
-// }
-// const ProductoRem1 = new Producto ("remera celeste", "4200");
-// const ProductoRem2 = new Producto ("remera blanca", "5000");
-// const ProductoRem3 = new Producto ("remera verde", "4000");
-// const Producto1 = new Producto ("sweater", "10000");
-
-// ProductoRem1.calcularIva ();
-// ProductoRem2.calcularIva ();
-// ProductoRem3.calcularIva ();
-// Producto1.calcularIva ();
-
-// const remeras = ["ProductoRem1", "ProductoRem2", "ProductoRem3"]
-// const sweater = ["Producto1"]
-// const mujer = remeras.concat(sweater)
-// console.log(mujer)
-
-// console.log(hoy.getFullYear())
-// console.log(hoy.getMonth())
-// console.log(hoy.getDay())
-const productos = [{id: 1, producto: "la isla del tesoro", precio: 20000},
-                {id: 2, producto: "romeo y julieta", precio: 25000}];
-
-let libros = [
+let productos1 = [
 {
     id: 'K1156235asdas-126',
-    name: 'La isla del  tesoro',
+    name: 'Cazadores de sombras: ciudad de hueso',
     price: '20000',
-    autor: 'Robert Louis Stevenson',
-    img:'./multimedia/la-isla-del-tesoro.jpg',
+    description: 'Cassandra Clare',
+    img: '../multimedia/Cazadores de Sombras Ciudad de Hueso.jpg',
+},
+{id: 'K11547trt-1278',
+    name: '30 sunsets para enamorarte',
+    price: '20000',
+    description: 'Mercedes Ron',
+    img: '../multimedia/30 sunsets para enamorarte.jpg',
+},
+{id: 'K115789erty-1278',
+    name: 'Boulevard',
+    price: '20000',
+    description: 'Flor M. Salvador',
+    img: '../multimedia/boulevard.webp',
+},
+{id: 'K1op-14441278',
+    name: 'Twisted love',
+    price: '20000',
+    description: 'Ana Huang',
+    img: '../multimedia/twisted love.webp',
 },
 ]
 
+function mostrarProductos1(){
+    let contenedor = document.querySelector('#productos1');
+
+    for (const product of ptoductos1){
+        contenedor.innerHTML +=
+
+        <div class="card" id=${product.id}>
+            <img src=${product.img} alt=${product.description}>
+            <div class="card-product">
+            <h2>${product.name}</h2>
+            <b class="precios">${product.price}</b>
+            <p>${product.description}</p>
+            <button>Comprar</button>
+            </div>
+        </div>
+    }
+}
+
+mostrarProductos1()

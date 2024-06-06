@@ -6,6 +6,8 @@
 body{
     background-color: #FF99C8;
     color: #FCF6BD;
+    min-height: 100vh;
+    max-height: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -40,18 +42,27 @@ span{
     
 }
 
-.productos{
+.sub-titulos{
+    color: #FF1053;
+    font-size: 30pt;
+    text-align: center;
+}
 
+.productos1{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax (320px, 1fr));
+    gap: 20px;
 }
 .precios{
     color: #FF1053;
     
 }
-
 .card{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: #FCF6BD;
 }
 .card img{
     width: 23%;
@@ -79,4 +90,46 @@ span{
 .card-product button:hover{
     background-color: #ffc5d4;
     box-shadow: 2px 4px 4px #2A324B;
+}
+
+
+#grilla2{
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-rows: 120px 0px;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    
+}
+.border2{
+    background-color: #FF1053;
+    width: 1349px;
+    margin-top: 10px;
+    height: 440px;
+}
+.condiciones{
+    direction: rtl;
+    list-style: none;
+    margin-right: 18px;
+    margin-top: 170px;
+}
+.condiciones a{
+    color: #EED5C2;
+    font-size: 18pt;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+}
+.condiciones a:hover{
+    text-decoration: underline #2A324B;
+}
+.derechos1{
+    font-size: 10pt;
+    color: grey;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+.derechos2{
+    font-size: 10pt;
+    color: grey;
+    margin-top: 1px;
 }
