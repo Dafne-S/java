@@ -273,7 +273,7 @@ const productos = [
     {
         id: "fantasia-02",
         titulo: "Harry potter y la piedra filosofal",
-        imagen: "./multimedia/harry potter y la piedra filosofal.jpg",
+        imagen: "./multimedia/harry potter y la piedra filosfal.jpg",
         autor: "(J.K. Rowling)",
         categoria: {
             nombre: "Fantasia",
@@ -351,7 +351,7 @@ const productos = [
     {
         id: "infantil-02",
         titulo: "Charlie y la fábrica de chocolate",
-        imagen: "./multimedia/charlie y la frabrica de chocolate.jpg",
+        imagen: "./multimedia/charlie y la fabrica de chocolate.jpg",
         autor: "(Roald Dahl)",
         categoria: {
             nombre: "Infantil",
@@ -575,8 +575,12 @@ const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".botones-categorias");
 const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesComprar = document.querySelectorAll(".producto-agregar");
+const numero = document.querySelector("#numero");
 
 function cargarProductos(productos){
+
+    contenedorProductos.innerHTML = "";
+
     productos.forEach(producto => {
     
         const div = document.createElement("div")
@@ -601,7 +605,6 @@ botonesCategorias.forEach(boton => {
     
     botonesCategorias.forEach(boton => boton.classList.remove("active"));
     e.currentTarget.classList.add("active");
-
     if (e.currentTarget.id != "todos"){
     const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
     console.log(productoCategoria);
@@ -616,31 +619,38 @@ botonesCategorias.forEach(boton => {
 
 function actualizarBotonesComprar(){
     botonesComprar = document.querySelectorAll(".producto-agregar");
-
     botonesComprar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
     });
 }
 
-const productosEnCarrito = [];
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if (productosEnCarritoLS){
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    actualizarNumero();
+} else{
+    productosEnCarrito = [];
+}
+
 function agregarAlCarrito(e){
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
-    console.log(productosEnCarrito);
     if(productosEnCarrito.some(producto => producto.id === idBoton)){
         const index =productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        productosEnCarrito[index].cantidad++;
     } else{
         productoAgregado.cantidad = 1;
         productosEnCarrito.push(productoAgregado);
     }
     actualizarNumero();
-
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 
 function actualizarNumero(){
     let nuevoNumero = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
-    nuevoNumero.innerHTML = nuevoNumero;
+    numero.innerText =nuevoNumero;
 }
-
 
